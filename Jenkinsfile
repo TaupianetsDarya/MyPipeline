@@ -6,7 +6,7 @@ pipeline {
 
             steps {
 
-                    sh 'mvn clean compile'
+                    sh './mvnw clean compile'
 
             }
         }
@@ -15,7 +15,7 @@ pipeline {
 
             steps {
 
-                    sh 'mvn test'
+                    sh './mvnw test'
 
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
 
-                    sh 'mvn deploy'
+                    sh './mvnw deploy'
 
             }
         }
